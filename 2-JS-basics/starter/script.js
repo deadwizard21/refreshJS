@@ -1184,7 +1184,7 @@ if (billGatesAvg > donaldTrump){
 */
 
 
-//STARWARS CODE HERE 
+//STARWARS CODE HERE
 ///
 
 
@@ -1196,7 +1196,7 @@ if (billGatesAvg > donaldTrump){
 
 /////////////////////////////////////////////////////
 /***************************************************
-*PART 1
+*PART 1   8.17.2019
 */
 
 
