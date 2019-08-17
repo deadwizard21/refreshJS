@@ -1101,7 +1101,7 @@ if (mark.average > john.average){
 
 
 
-
+/*
 var billGates = {
 	fullName: 'Bill Gates',
 	bills: [124, 48, 268, 180, 42],
@@ -1179,7 +1179,23 @@ if (billGatesAvg > donaldTrump){
 }else{
 		console.log('Donald Trump won: '+donaldTrumpAvg);
 }
+*/
 
+
+//STARWARS CODE HERE 
+///
+
+
+
+
+
+
+
+
+/////////////////////////////////////////////////////
+/***************************************************
+*PART 1
+*/
 
 
 
