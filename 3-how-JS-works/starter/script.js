@@ -5,7 +5,6 @@
 function calculateAge(year){
   console.log(2016-year);
 }
-
 calculateAge(1965);
 */
 //arguments object is created, containing all the arguments
@@ -30,8 +29,6 @@ calculateAge(1965);
 var retirement = function(year){
   console.log(65-(2016-year));
 }
-
-
 retirement(1996);
 */
 //argument object is created and the 1996 argument is stores for
@@ -46,8 +43,6 @@ retirement(1996);
 
 /*
 retirement(1996);
-
-
 var retirement = function(year){
   console.log(65-(2016-year));
 }
@@ -90,11 +85,9 @@ foo();
 /*
 var a = 'Hello!';
 first();
-
 function first() {
     var b = 'Hi!';
     second();
-
     function second() {
         var c = 'Hey!';
         console.log(a + b + c);
@@ -109,20 +102,18 @@ function first() {
 /*
 var a = 'Hello!';
 first();
-
 function first() {
     var b = 'Hi!';
     second();
-
     function second() {
         var c = 'Hey!';
         third()
     }
 }
-
 function third() {
     var d = 'John';
-    console.log(a + b + c + d);
+    //console.log(a + b + c + d);
+	console.log(c);
 }
 */
 
@@ -130,3 +121,39 @@ function third() {
 
 ///////////////////////////////////////
 // Lecture: The this keyword
+
+
+var john = {
+	name: 'john',
+	yearOfBirth: 1990,
+	calculateAge: function(){
+		console.log(2016- this.yearOfBirth);
+	
+	}
+};
+
+
+var mike = {
+	name: 'mike',
+	yearOfBirth: 1984,
+}
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
+
+//john.calculateAge();
+//console.log(this);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
