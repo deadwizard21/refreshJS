@@ -122,13 +122,13 @@ function third() {
 ///////////////////////////////////////
 // Lecture: The this keyword
 
-
+/*
 var john = {
 	name: 'john',
 	yearOfBirth: 1990,
 	calculateAge: function(){
 		console.log(2016- this.yearOfBirth);
-	
+
 	}
 };
 
@@ -144,16 +144,57 @@ mike.calculateAge();
 //john.calculateAge();
 //console.log(this);
 
+*/
+
+
+var skylwaLker={
+  fullName:"MR. SKYWALKER",
+  homePlanetName:"mercury",
+  debitCardBalance:4000,
+
+}
+//the number of lightyears away is the number of characters
+var tempGalacticTravelData={
+  currentLocation:'durka',
+  trevelCost: function(){
+
+    var lightYears = this.destination.length;
+    if (lightYears < 1){
+      this.distance = 50001;
+      console.log('test');
+    }else if ((lightYears >= 1) && (lightYears < 6)){
+      this.distance = 100001;
+    }else{
+      switch(true){
+        case(lightYears <= 7):
+          console.log('unavailable at the moment');
+          this.gasCost = 'NaN';
+        break;
+        default:
+          console.log('ERROR TOO FAR');
+          this.gasCost = 'NaN';
+          break;
+      }
+    };
+
+
+    if (this.distance < 50000){
+      this.gasCost = 6.6 * this.distance;
+    }else if (( this.distance >= 50000) &&  (this.distance < 200000)){
+      this.gasCost = 3.3 * this.distance;}
+    else{
+      console.log('The price for your gas during this travel is not available.');
+
+    }
+  }
+
+};
 
 
 
 
-
-
-
-
-
-
-
-
-
+tempGalacticTravelData.debitCardBalance = skylwaLker.debitCardBalance;
+tempGalacticTravelData.destination = skylwaLker.homePlanetName;
+tempGalacticTravelData.trevelCost();
+//tempGalacticTravelData.galacticTravel();
+console.log('Your total travel cost to the planet '+tempGalacticTravelData.destination+' will be '+tempGalacticTravelData.gasCost+ ' farkens.')
