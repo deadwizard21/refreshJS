@@ -146,7 +146,7 @@ mike.calculateAge();
 
 */
 
-
+/*
 var skylwaLker={
   fullName:"MR. SKYWALKER",
   homePlanetName:"mercury",
@@ -198,3 +198,4 @@ tempGalacticTravelData.destination = skylwaLker.homePlanetName;
 tempGalacticTravelData.trevelCost();
 //tempGalacticTravelData.galacticTravel();
 console.log('Your total travel cost to the planet '+tempGalacticTravelData.destination+' will be '+tempGalacticTravelData.gasCost+ ' farkens.')
+*/
