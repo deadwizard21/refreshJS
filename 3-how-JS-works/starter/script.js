@@ -199,3 +199,39 @@ tempGalacticTravelData.trevelCost();
 //tempGalacticTravelData.galacticTravel();
 console.log('Your total travel cost to the planet '+tempGalacticTravelData.destination+' will be '+tempGalacticTravelData.gasCost+ ' farkens.')
 */
+
+//values are not
+
+/*
+function secretVariable(){
+  var private = "super secret code";
+  return function(){
+    return private;
+  }
+};
+
+
+//var getPrivateVariable = secretVariable();
+console.log(secretVariable());
+//console.log(getPrivateVariable());
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* END */
