@@ -9,21 +9,61 @@ GAME RULES:
 
 */
 
-var scores, roundScore, activePlayer, dice;
+var scores, roundScore, activePlayer;
 scores =[0,0];
 roundScore = 0;
 activePlayer = 1;
 
-dice = Math.floor(Math.random()*6)+1;
+
+
+
+
+// class .
+document.querySelector('.dice').style.display = 'none';
+
+//this only works for IDs
+document.getElementById('score-0').textContent=0;
+document.getElementById('score-1').textContent=0;
+document.getElementById('current-0').textContent=0;
+document.getElementById('current-1').textContent=0;
+
+//this is called an atonomous function
+document.querySelector('.btn-roll').addEventListener('click', function(){
+	//1. random number
+	var dice = Math.floor(Math.random()*6)+1;
+	
+	
+	//2. display the result    //display block
+	var diceDOM = document.querySelector('.dice');
+	
+	diceDOM.style.display = 'block';
+	diceDOM.src = 'dice-'+dice+'.png';
+	//3.update the round score, only if the number is NOT a 1
+});
+
+
+
+
 
 //setter
-document.querySelector('#current-' + activePlayer).textContent = dice;
+//document.querySelector('#current-' + activePlayer).textContent = dice;
 //document.querySelector('#current-' + activePlayer).innerHTML = '<em>'+ dice + '</em>';
 
 //getter
 //id #
-var x = document.querySelector('#score-0').textContent;
-console.log(x);
+//var x = document.querySelector('#score-0').textContent;
+//console.log(x);
 
-// class .
-document.querySelector('.dice').style.display = 'none';
+
+
+/*
+function btn(){
+	//do something here
+	console.log('works');
+}
+
+btn()
+
+//this is called a call back function
+document.querySelector('.btn-roll').addEventListener('click',btn);
+*/
