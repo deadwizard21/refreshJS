@@ -12,7 +12,7 @@ GAME RULES:
 var scores, roundScore, activePlayer;
 scores =[0,0];
 roundScore = 0;
-activePlayer = 1;
+activePlayer = 0;
 
 
 
@@ -38,11 +38,47 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 	
 	diceDOM.style.display = 'block';
 	diceDOM.src = 'dice-'+dice+'.png';
+	
 	//3.update the round score, only if the number is NOT a 1
+	if (dice !== 1){
+		//add score to the round score
+		roundScore += dice;
+		document.querySelector('#current-' + activePlayer).textContent = roundScore;
+		
+	}else{
+		
+		//next player
+		//turnery operator
+		activePlayer === 0 ? activePlayer = 1 : activePlayer = 0;
+		roundScore = 0;
+		
+		document.getElementById('current-0').textContent = '0';
+		document.getElementById('current-1').textContent = '0';
+		
+		//toggle adds or removes depending if it exists
+		document.querySelector('player-0-panel').classList.toggle('active');
+		document.querySelector('player-1-panel').classList.toggle('active');
+		
+		//document.querySelector('player-0-panel').classList.remove('active');
+		//document.querySelector('player-1-panel').classList.add('active');
+		
+		document.querySelector('.class').style.display = 'none';
+	}
+	
 });
 
 
 
+
+
+
+
+
+
+
+
+//so far what is happening is that, the dice image is first removed, then upon clicking .btn_roll, a atononoys 
+//function starts,the first thing that happens is that a random number is generated, then we display a new image via source //from the genreated number, but before all of this happens, we zero out all numbers.
 
 
 //setter
@@ -67,3 +103,17 @@ btn()
 //this is called a call back function
 document.querySelector('.btn-roll').addEventListener('click',btn);
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
