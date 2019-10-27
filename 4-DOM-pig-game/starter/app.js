@@ -22,9 +22,9 @@ init();
 
 //this is called an atonomous function
 document.querySelector('.btn-roll').addEventListener('click', function(){
-	
+
 	if(gamePlaying){
-		
+
 		//1. random number
 		var dice = Math.floor(Math.random()*6)+1;
 
@@ -46,8 +46,8 @@ document.querySelector('.btn-roll').addEventListener('click', function(){
 			//next player
 			nextPlayer();
 		}
-	}	
-	
+	}
+
 });
 
 
@@ -75,8 +75,8 @@ document.querySelector('.btn-hold').addEventListener('click', function(){
 			nextPlayer();
 		}
 	}
-        
-	
+
+
 
 });
 
@@ -130,15 +130,18 @@ function init(){
 	//this only works for IDs
 	document.getElementById('score-0').textContent=0;
 	document.getElementById('score-1').textContent=0;
+
 	document.getElementById('current-0').textContent=0;
 	document.getElementById('current-1').textContent=0;
+	
 	document.getElementById('name-0').textContent = 'Player 1';
 	document.getElementById('name-1').textContent = 'Player 2';
+
 	document.querySelector('.player-0-panel').classList.remove('winner');
 	document.querySelector('.player-1-panel').classList.remove('winner');
 	document.querySelector('.player-0-panel').classList.remove('active');
 	document.querySelector('.player-1-panel').classList.remove('active');
-	
+
 	document.querySelector('.player-0-panel').classList.add('active');
 };
 
@@ -150,7 +153,7 @@ function init(){
 
 
 
-//so far what is happening is that, the dice image is first removed, then upon clicking .btn_roll, a atononoys 
+//so far what is happening is that, the dice image is first removed, then upon clicking .btn_roll, a atononoys
 //function starts,the first thing that happens is that a random number is generated, then we display a new image via source //from the genreated number, but before all of this happens, we zero out all numbers.
 
 
@@ -176,17 +179,3 @@ btn()
 //this is called a call back function
 document.querySelector('.btn-roll').addEventListener('click',btn);
 */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
